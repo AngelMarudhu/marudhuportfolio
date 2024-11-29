@@ -1,0 +1,131 @@
+article {
+  width: 100%;
+  margin: 0;
+  height: fit-content;
+  background-color: rgb(34, 167, 167);
+  transition: 0.5s;
+  transition-duration: 1s;
+  padding-bottom: 20px;
+}
+
+.top_of_div {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h2 {
+  margin: 0;
+  padding: 10px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  transition-duration: 0.5s;
+}
+
+.project .project_title {
+  margin-bottom: 8px;
+}
+
+.project_card {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  width: 80%;
+  height: auto;
+  border-radius: 25px;
+  transition: 0.5s;
+  transform-style: flat;
+  cursor: pointer;
+}
+
+.project_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.project_details button {
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid red;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.project_details span {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.selected_project {
+  border: 2px solid red;
+  border-radius: 20px;
+  text-align: left;
+  padding: 10px;
+  transition-duration: 0.5s;
+}
+
+.selected_project_description {
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+
+.selected_project_button {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid red;
+  border-radius: 25px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+/* .selected_project_button a:hover {
+  background-color: red;
+} */
+
+.selected_project_button a:link,
+a:visited {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 12px;
+}
+
+.selected_project_github {
+  background-color: black;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid red;
+  border-radius: 25px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.selected_project_github a {
+  background-color: transparent;
+  color: rgb(255, 0, 0);
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 12px;
+}

@@ -1,0 +1,140 @@
+.top {
+  margin: 0;
+  height: auto;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(227, 251, 251);
+}
+
+.hero {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hero_intro {
+  width: fit-content;
+}
+
+.hero_name {
+  border: 2px solid red;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.hero_title {
+  border: 2px solid red;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.hero_name_tag {
+  color: rgb(0, 46, 252);
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.hero_profile {
+  width: 500px;
+  border: 2px solid red;
+}
+
+.hero_profile p {
+  font-size: 25px;
+  padding: 10px;
+}
+
+.hero_profile p span {
+  font-size: 25px;
+  color: red;
+  font-weight: bold;
+}
+
+/* //////////////////////// RIGHT SIDE  ///////////////////////////////// */
+
+.hero_welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid red;
+}
+
+.hero_pic {
+  width: 500px;
+  height: fit-content;
+}
+
+.welcome {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  border-top: 2px solid red;
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 100px;
+    top: 0;
+  }
+
+  .hero_intro {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .hero_profile {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .hero_pic {
+    width: 100%;
+    height: auto;
+  }
+  .welcome {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 100px;
+    top: 0;
+  }
+
+  .hero_intro {
+    width: 100%; /* Full width for smaller screens */
+    text-align: center; /* Center align text */
+    margin-bottom: 10px;
+  }
+
+  .hero_profile {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .hero_pic {
+    width: 100%;
+    height: auto;
+  }
+  .welcome {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,60 @@
+section {
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: 0.5s;
+}
+
+.about_section {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.about_section h2 {
+  text-align: center;
+  border-bottom: 2px solid green;
+}
+
+.about_education_div {
+  border: 2px solid red;
+}
+
+.about_certification_div {
+  border: 2px solid red;
+}
+
+.about_certification_div li {
+  list-style-type: circle;
+}
+
+.about_skills_div {
+  border: 2px solid red;
+  display: flex;
+  padding-bottom: 10px;
+  flex-direction: column;
+}
+
+.about_skills_div ul {
+  list-style: none;
+}
+
+.about_section_skills {
+  display: flex;
+  align-items: flex-start;
+  justify-content: baseline;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.about_section_skills_button {
+  padding: 8px;
+  border-radius: 14px;
+  border: 2px solid red;
+  background-color: rgb(211, 224, 143);
+}
+
+.about_concepts ul li {
+  margin-top: 10px;
+  list-style-type: circle;
+}

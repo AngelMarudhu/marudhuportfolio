@@ -1,0 +1,141 @@
+.footer {
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+  background-color: rgb(100, 135, 135);
+}
+
+.footer p {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.footer_div {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.footer_social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer_social button {
+  width: 70px;
+  height: 70px;
+  padding: 8px;
+  border: 2px solid green;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.footer_social button:hover {
+  background-color: gray;
+  scale: 1.2;
+}
+
+.social {
+  width: 50px;
+  height: 50px;
+}
+
+.footer_input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  transition: 1s;
+}
+
+.footer_input form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  transition-duration: 1s;
+}
+
+.footer_input form input {
+  padding: 8px;
+  border: 2px solid red;
+  background-color: transparent;
+  box-shadow: inset 1px 1px 42px 0px rgba(0, 0, 0, 0.66);
+}
+
+.footer_input form textarea {
+  background-color: transparent;
+  height: 150px;
+  padding: 8px;
+  border: 2px solid red;
+  box-shadow: inset 1px 1px 42px 0px rgba(0, 0, 0, 0.66);
+}
+
+.footer_input form label {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.footer_input form button {
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid red;
+  box-shadow: inset 1px 1px 42px 0px rgba(0, 0, 0, 0.66);
+  cursor: pointer;
+}
+
+.thanks_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  transition: 0.5s;
+}
+
+.thanks_div button {
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  border: 2px solid red;
+  box-shadow: inset 1px 1px 42px 0px rgba(0, 0, 0, 0.66);
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+.thanks_div button a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer_social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer_social button {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+  }
+
+  .footer_social button:hover {
+    background-color: gray;
+    scale: 1.2;
+  }
+
+  .social {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer_input form {
+    width: 100%;
+  }
+}
