@@ -79,7 +79,9 @@ const Footer = () => {
         ))}
         {submitted ? (
           <div className="thanks_div">
-            <h1>Thanks For Your Valuable Time 💗</h1>
+            <h1 className="thanks_div_heading">
+              Thanks For Your Valuable Time 💗
+            </h1>
 
             <button onClick={handleReset}>
               <a href="#submitbtn">
