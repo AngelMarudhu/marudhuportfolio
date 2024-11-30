@@ -3,7 +3,6 @@
   height: auto;
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(227, 251, 251);
 }
 
 .hero {
@@ -15,14 +14,19 @@
 }
 
 .hero_intro {
-  width: fit-content;
+  width: 600px;
+  text-align: justify;
+  box-sizing: border-box;
 }
 
 .hero_name {
-  border: 2px solid red;
   padding: 10px;
   cursor: pointer;
   margin-bottom: 10px;
+}
+
+.hero_name span {
+  color: var(--accent-color);
 }
 
 .hero_title {
@@ -38,8 +42,7 @@
 }
 
 .hero_profile {
-  width: 500px;
-  border: 2px solid red;
+  width: fit-content;
 }
 
 .hero_profile p {
@@ -59,7 +62,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid red;
 }
 
 .hero_pic {
@@ -71,8 +73,8 @@
   width: 100%;
   text-align: center;
   margin-top: 10px;
-  border-top: 2px solid red;
   font-size: 40px;
+  color: var(--accent-color);
 }
 
 @media only screen and (max-width: 768px) {
@@ -87,13 +89,34 @@
 
   .hero_intro {
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin-bottom: 10px;
   }
 
+  .hero_name {
+    width: 80%;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .hero_name span {
+    font-size: 30px;
+  }
+
   .hero_profile {
+    text-align: left;
     width: 100%;
+    font-size: 16px;
+  }
+
+  .hero_profile p {
+    font-size: 19px;
+  }
+
+  .hero_profile p span {
     font-size: 18px;
+    color: var(--accent-color);
+    font-weight: bold;
   }
 
   .hero_pic {

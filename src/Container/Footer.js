@@ -27,11 +27,7 @@ const Footer = () => {
   return (
     <section className="footer">
       <div className="footer_div">
-        <h2
-          style={{ textAlign: "center", marginBottom: "20px", color: "blue" }}
-        >
-          Take A Coffee & Chat With Me
-        </h2>
+        <h2 className="tea-break">Take A Coffee & Chat With Me</h2>
         {images.social.map((images, index) => (
           <div key={index} className="footer_social">
             <button>
@@ -94,30 +90,30 @@ const Footer = () => {
         ) : (
           <div className="footer_input">
             <form onSubmit={submitionHandle}>
-              <label htmlFor="name">YourName:</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 onChange={handleChange}
                 required
+                placeholder="Your Good Name"
               />
               <br />
-              <label htmlFor="email">Your Email:</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 required
                 onChange={handleChange}
+                placeholder="Your Gentle Gmail"
               />
               <br />
-              <label htmlFor="thoughts">Your Thoughts</label>
               <textarea
                 name="message"
                 id="thoughts"
                 onChange={handleChange}
                 required
+                placeholder="Your Awesome Thoughts"
               />
               <br />
               <button className="buttons" type="submit" id="submitbtn">
@@ -127,7 +123,7 @@ const Footer = () => {
           </div>
         )}
       </div>
-      <p>@All Rights Reserved Marudhupandiyan</p>
+      <p>Ideas Comes From Curiosity! Stay Curios!</p>
     </section>
   );
 };

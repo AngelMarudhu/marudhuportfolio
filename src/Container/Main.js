@@ -10,7 +10,7 @@ const Main = () => {
         <div className="hero_intro">
           <h2 className="hero_name">
             Hi There! It's{" "}
-            <span className="hero_name_tag">MarudhuPandiyan</span>
+            <span className="hero_name_tag">MarudhuPandiyan S</span>
           </h2>
 
           <div className="hero_profile">
@@ -29,12 +29,12 @@ const Main = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1, transition: { duration: 2 } }}
         >
+          <h4 className="welcome">Mern Stack Developer</h4>
           <img
             className="hero_pic"
             src={images.assets.myPic}
             alt="mypicture"
           ></img>
-          <h4 className="welcome">Mern Stack Developer</h4>
         </motion.div>
       </div>
     </section>

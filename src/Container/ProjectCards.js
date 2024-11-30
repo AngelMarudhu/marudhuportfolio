@@ -14,10 +14,8 @@ const ProjectCards = () => {
   };
 
   return (
-    <article>
+    <article id="project">
       <div className="top_of_div">
-        <h2>Projects</h2>
-
         {project ? (
           <div className="selected_project">
             {projectData
@@ -31,7 +29,7 @@ const ProjectCards = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Here It Is The GitHub Link For Your Review
+                      Here Is The GitHub Link For Your Review
                     </a>
                   </button>
                 </div>
@@ -43,11 +41,15 @@ const ProjectCards = () => {
             </button>
           </div>
         ) : (
-          <div className="project">
+          <div className="project" id="challenge">
             {projectData.map((project) => (
               <div key={project.id} className="project_card">
                 <h3 className="project_title">{project.title}</h3>
-                <img src={project.image} alt={project.title} />
+                <img
+                  onClick={() => handleChallenge(project.id)}
+                  src={project.image}
+                  alt={project.title}
+                />
 
                 {/* <div className="project_techstack">
               {project.techStack.map((tech, index) => (
@@ -58,12 +60,6 @@ const ProjectCards = () => {
             </div> */}
 
                 <div className="project_details">
-                  <button
-                    onClick={() => handleChallenge(project.id)}
-                    id="challenge"
-                  >
-                    Challenges
-                  </button>
                   <span>
                     Tech Stack: <strong>{project.techStack}</strong>
                   </span>

@@ -12,10 +12,10 @@ const Home = () => {
       <div id="main">
         <Main />
       </div>
-      <div id="project">
+      <div>
         <ProjectCards />
       </div>
-      <div id="about">
+      <div>
         <About />
       </div>
       <div id="footer">

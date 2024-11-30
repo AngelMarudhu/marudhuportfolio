@@ -15,12 +15,12 @@ const Navbar = () => {
         {/* Logo Section */}
         <img
           className="nav_logo"
-          src={images.assets.home}
+          src={images.assets.logo}
           alt="Portfolio Logo"
         />
 
         {/* Header Section */}
-        <header className="nav_header">You've Reached Me 🚀</header>
+        <header className="nav_header">Crafting Code, Building Dreams</header>
 
         {/* Menu Button for Mobile */}
         <button className="menu_button" onClick={toggleMenu}>

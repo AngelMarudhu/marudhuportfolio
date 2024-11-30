@@ -2,12 +2,19 @@
   width: 100%;
   height: fit-content;
   margin: 0;
-  background-color: rgb(100, 135, 135);
+}
+
+.tea-break {
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .footer p {
   padding-bottom: 20px;
   text-align: center;
+  color: var(--accent-color);
+  font-weight: bold;
 }
 
 .footer_div {
@@ -27,7 +34,8 @@
   width: 70px;
   height: 70px;
   padding: 8px;
-  border: 2px solid green;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
   border-radius: 50%;
   background-color: transparent;
   transition: 0.5s;
@@ -36,6 +44,14 @@
 .footer_social button:hover {
   background-color: gray;
   scale: 1.2;
+}
+
+.buttons {
+  color: var(--accent-color);
+}
+
+.buttons:hover {
+  scale: 0.9;
 }
 
 .social {
@@ -62,29 +78,37 @@
 
 .footer_input form input {
   padding: 8px;
-  border: 2px solid red;
+  border: none;
   background-color: transparent;
-  box-shadow: inset 1px 1px 42px 0px rgba(0, 0, 0, 0.66);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+.footer_input form input:focus {
+  font-size: 18px;
 }
 
 .footer_input form textarea {
+  font-family: "Lato";
   background-color: transparent;
   height: 150px;
   padding: 8px;
-  border: 2px solid red;
-  box-shadow: inset 1px 1px 42px 0px rgba(0, 0, 0, 0.66);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.5s;
+  transition-timing-function: ease;
 }
 
-.footer_input form label {
-  font-weight: bold;
-  margin-bottom: 3px;
+.footer_input form textarea:focus {
+  font-size: 18px;
+  border: 2px solid var(--accent-color);
 }
 
 .footer_input form button {
   padding: 10px;
   font-size: 20px;
-  border: 2px solid red;
-  box-shadow: inset 1px 1px 42px 0px rgba(0, 0, 0, 0.66);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   cursor: pointer;
 }
 
@@ -101,10 +125,10 @@
   padding: 10px;
   font-size: 20px;
   margin-top: 10px;
-  border: 2px solid red;
   box-shadow: inset 1px 1px 42px 0px rgba(0, 0, 0, 0.66);
   cursor: pointer;
   transition-duration: 1s;
+  color: var(--accent-color);
 }
 
 .thanks_div button a {

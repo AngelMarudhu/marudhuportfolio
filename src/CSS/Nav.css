@@ -1,11 +1,11 @@
 .nav {
   width: 100%;
   position: fixed;
-  background-color: blanchedalmond;
+  background-color: var(--accent-color);
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   z-index: 1000;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
 }
 
 .nav_navbar {
@@ -15,6 +15,12 @@
   margin-left: 20px;
   margin-right: 20px;
   color: rgb(132, 0, 255);
+}
+
+.nav_header {
+  text-align: center;
+  color: white;
+  flex: 1;
 }
 
 .menu_button {
@@ -29,9 +35,9 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
-  border: 2px solid red;
   padding: 5px;
   border-radius: 10px;
+  box-shadow: var(--box-shadows);
 }
 
 .nav_links {
@@ -39,6 +45,7 @@
   display: flex;
   gap: 15px;
   transition: 1s;
+  margin-bottom: 8px;
   transition-duration: 1s;
 }
 
@@ -48,12 +55,14 @@ a {
 
 .nav_link {
   transition: 1s;
-  color: black;
+  color: white;
   border: 2px solid red;
-  padding: 8px;
-  border-radius: 18px;
-  background-color: transparent;
+  padding: 11px;
+  border-radius: 5px;
+  background-color: purple;
+  text-align: center;
   text-decoration: none;
+  box-shadow: var(--box-shadows);
 }
 
 @media only screen and (max-width: 768px) {
