@@ -1,9 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../CSS/Nav.css";
 import images from "../Utils/Index";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const menuRef = useRef(null);
+
+  const closeMenu = (e) => {
+    console.log(menuRef.current);
+    if (menuRef.current && !menuRef.current.contains(e.target)) {
+      setToggle(false); // Close the menu if clicking outside
+    }
+  };
+
+  console.log(menuRef);
+  useEffect(() => {
+    document.addEventListener("mousedown", closeMenu);
+    return () => {
+      document.addEventListener("mousedown", closeMenu);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setToggle(!toggle);
@@ -13,11 +30,13 @@ const Navbar = () => {
     <nav className="nav">
       <div className="nav_navbar">
         {/* Logo Section */}
-        <img
-          className="nav_logo"
-          src={images.assets.logo}
-          alt="Portfolio Logo"
-        />
+        <Link to="/">
+          <img
+            className="nav_logo"
+            src={images.assets.logo}
+            alt="Portfolio Logo"
+          />
+        </Link>
 
         {/* Header Section */}
         <header className="nav_header">Crafting Code, Building Dreams</header>
@@ -29,7 +48,7 @@ const Navbar = () => {
         </button>
 
         {/* Navigation Links */}
-        <ul className={`nav_links ${toggle ? "show_menu" : ""}`}>
+        <ul className={`nav_links ${toggle ? "show_menu" : ""}`} ref={menuRef}>
           <li>
             <a href="#main" className="nav_link">
               Main

@@ -65,7 +65,7 @@
 }
 
 .hero_pic {
-  width: 500px;
+  width: auto;
   height: fit-content;
 }
 
@@ -117,6 +117,10 @@
     font-size: 18px;
     color: var(--accent-color);
     font-weight: bold;
+  }
+
+  .hero_welcome {
+    margin-bottom: 20px;
   }
 
   .hero_pic {

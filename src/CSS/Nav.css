@@ -56,7 +56,6 @@ a {
 .nav_link {
   transition: 1s;
   color: white;
-  border: 2px solid red;
   padding: 11px;
   border-radius: 5px;
   background-color: purple;
@@ -75,7 +74,7 @@ a {
     display: none;
     flex-direction: column;
     width: 100%;
-    gap: 30px;
+    gap: 0;
     position: absolute;
     top: 50px;
     left: 0;
@@ -95,8 +94,11 @@ a {
   }
 
   .nav_links.show_menu {
+    padding-top: 20px;
+    padding-bottom: 15px;
     display: flex;
-    padding: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
     transition: 1s;
     transition-duration: 1s;
   }
