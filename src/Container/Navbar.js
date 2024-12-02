@@ -7,24 +7,22 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const menuRef = useRef(null);
 
+  const toggleMenu = () => {
+    setToggle((prev) => !prev);
+  };
+
   const closeMenu = (e) => {
-    console.log(menuRef.current);
     if (menuRef.current && !menuRef.current.contains(e.target)) {
       setToggle(false); // Close the menu if clicking outside
     }
   };
 
-  console.log(menuRef);
   useEffect(() => {
     document.addEventListener("mousedown", closeMenu);
     return () => {
       document.addEventListener("mousedown", closeMenu);
     };
   }, []);
-
-  const toggleMenu = () => {
-    setToggle(!toggle);
-  };
 
   return (
     <nav className="nav">
