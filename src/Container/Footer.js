@@ -1,27 +1,43 @@
 import React, { useState } from "react";
 import images from "../Utils/Index";
 import "../CSS/FooterPage.css";
+import emailjs from "@emailjs/browser";
 
 const Footer = () => {
-  let [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  let [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    to_name: "",
+    from_name: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  // Handle form data change
   const handleChange = (e) => {
-    let { name, value } = e.target;
+    const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  /// when comes complex application you should consider call back function inside of the setFormData() function that would more sense and tha will help us manage our latest data we can easily update our new values buddy
-
-  //// like setFormData((prev) => ({...prev, [name]:value}))..... like that buddy
-
+  // Handle form submission
   const submitionHandle = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-  };
+    setStatus("sending...");
 
-  const handleReset = () => {
-    setFormData({ name: "", email: "", message: "" });
-    setSubmitted(false);
+    // Sending form data to EmailJS using form reference
+    emailjs
+      .sendForm(
+        "service_fh1brjm", // Your service ID
+        "template_bv4vbvg", // Your template ID
+        e.target, // Use the form directly from the event
+        "9Gkyp4yme7SisKHCl" // Your public key (user ID)
+      )
+      .then((result) => {
+        setStatus("Message sent successfully!");
+        setFormData({ to_name: "", from_name: "", message: "" }); // Clear form after submission
+      })
+      .catch((error) => {
+        console.error(error.text); // Log any errors
+        setStatus("Please try again.");
+      });
   };
 
   return (
@@ -77,55 +93,46 @@ const Footer = () => {
             </button>
           </div>
         ))}
-        {submitted ? (
-          <div className="thanks_div">
-            <h1 className="thanks_div_heading">
-              Thanks For Your Valuable Time 💗
-            </h1>
 
-            <button onClick={handleReset}>
-              <a href="#submitbtn">
-                Smash The Button If You've Entered Wrong Data
-              </a>
+        <div className="footer_input">
+          <form onSubmit={submitionHandle}>
+            <input
+              type="text"
+              id="to_name"
+              name="to_name" // Change the name to "to_name"
+              value={formData.to_name} // Bind the value to formData
+              onChange={handleChange}
+              required
+              placeholder="Your Good Name"
+            />
+            <br />
+            <input
+              type="text"
+              id="from_name"
+              name="from_name" // Change the name to "from_name"
+              value={formData.from_name} // Bind the value to formData
+              onChange={handleChange}
+              required
+              placeholder="Your Gentle Gmail"
+            />
+            <br />
+            <textarea
+              name="message"
+              id="thoughts"
+              value={formData.message} // Bind the value to formData
+              onChange={handleChange}
+              required
+              placeholder="Your Awesome Thoughts"
+            />
+            <br />
+            <button className="buttons" type="submit" id="submitbtn">
+              Submit
             </button>
-          </div>
-        ) : (
-          <div className="footer_input">
-            <form onSubmit={submitionHandle}>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                onChange={handleChange}
-                required
-                placeholder="Your Good Name"
-              />
-              <br />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                onChange={handleChange}
-                placeholder="Your Gentle Gmail"
-              />
-              <br />
-              <textarea
-                name="message"
-                id="thoughts"
-                onChange={handleChange}
-                required
-                placeholder="Your Awesome Thoughts"
-              />
-              <br />
-              <button className="buttons" type="submit" id="submitbtn">
-                Submit
-              </button>
-            </form>
-          </div>
-        )}
+          </form>
+        </div>
+        <p>{status}</p>
       </div>
-      <p>Ideas Comes From Curiosity! Stay Curios!</p>
+      <p>Ideas Come From Curiosity! Stay Curious!</p>
     </section>
   );
 };
