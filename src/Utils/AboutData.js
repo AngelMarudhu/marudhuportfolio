@@ -5,6 +5,9 @@ import ts from "../Source/typescript.png";
 import react from "../Source/react.png";
 import node from "../Source/node.png";
 import redux from "../Source/redux.png";
+import mongo from "../Source/mongodb.png";
+import leetcode from "../Source/discord.png";
+import express from "../Source/express.png";
 
 const aboutData = {
   education: [
@@ -49,9 +52,9 @@ const aboutData = {
     { img: react },
     { img: node },
     { img: redux },
-    { img: react },
-    { img: node },
-    { img: redux },
+    { img: mongo },
+    { img: express },
+    { img: leetcode },
   ],
 
   // skills: [

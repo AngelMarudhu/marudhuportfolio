@@ -59,7 +59,7 @@ section {
 .about_section_skills {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
 }
