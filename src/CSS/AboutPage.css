@@ -13,6 +13,8 @@ section {
 
 .about_section h2 {
   text-align: center;
+  margin-bottom: 0;
+  font-size: 30px;
   color: var(--accent-color);
 }
 
@@ -22,9 +24,17 @@ section {
   padding-bottom: 10px;
 }
 
+.about_education_div h3 {
+  margin-top: 0;
+}
+
 .about_certification_div {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 8px;
+}
+
+.about_certification_div h3 {
+  margin-top: 0;
 }
 
 .about_certification_div li {
@@ -37,36 +47,61 @@ section {
   display: flex;
   padding-bottom: 10px;
   flex-direction: column;
+  width: 100%;
 }
 
 .about_skills_div ul {
   list-style: none;
+  padding: 0;
+  margin-left: 20px;
 }
 
 .about_section_skills {
   display: flex;
-  align-items: flex-start;
-  justify-content: baseline;
+  align-items: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
 }
 
-.about_section_skills_button {
-  padding: 5px 8px 5px 8px;
+.about_section_skills h2 {
+  margin-bottom: 5px;
+}
+
+/* .skills_img_div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+} */
+
+.about_section_skills img {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--accent-color);
+  padding: 5px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* .about_section_skills_button {
   border-radius: 14px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   background-color: rgb(211, 224, 143);
   transition: 0.5s;
+  font-size: 16px;
   font-weight: bold;
-}
+} */
 
 .about_section_skills_button:hover {
-  scale: 0.9;
+  scale: 0.5;
 }
 
 .about_concepts ul li {
   margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
   list-style-type: circle;
 }
 

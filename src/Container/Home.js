@@ -8,7 +8,7 @@ import Footer from "./Footer";
 const Home = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div id="main">
         <Main />
       </div>

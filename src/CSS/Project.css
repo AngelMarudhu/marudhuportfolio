@@ -25,7 +25,9 @@ article {
 }
 
 .project .project_title {
-  margin-bottom: 8px;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 15px;
   color: var(--accent-color);
 }
 
@@ -146,4 +148,13 @@ a:visited {
   text-decoration: none;
   display: inline-block;
   border-radius: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  .project .project_title {
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+  }
 }

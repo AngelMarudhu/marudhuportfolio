@@ -1,13 +1,24 @@
 .top {
   margin: 0;
-  height: auto;
+  height: 100vh;
   width: 100%;
   min-height: 100vh;
 }
 
+.top_heading {
+  position: absolute;
+  margin-top: 20px;
+  font-size: 40px;
+  left: 20%;
+  right: 20%;
+  color: var(--accent-color);
+  word-spacing: 3px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
 .hero {
-  position: relative;
-  top: 100px;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -21,6 +32,7 @@
 
 .hero_name {
   padding: 10px;
+  font-size: 30px;
   cursor: pointer;
   margin-bottom: 10px;
 }
@@ -45,6 +57,10 @@
   width: fit-content;
 }
 
+.hero_profile span {
+  padding: 10px;
+}
+
 .hero_profile p {
   font-size: 25px;
   padding: 10px;
@@ -52,7 +68,7 @@
 
 .hero_profile p span {
   font-size: 25px;
-  color: red;
+  color: var(--accent-color);
   font-weight: bold;
 }
 
@@ -65,8 +81,8 @@
 }
 
 .hero_pic {
-  width: auto;
-  height: fit-content;
+  width: 350px;
+  height: 350px;
 }
 
 .welcome {
@@ -78,13 +94,27 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .top {
+    height: auto;
+  }
   .hero {
     flex-direction: column;
     justify-content: center;
     padding-right: 10px;
     padding-left: 10px;
-    padding-top: 100px;
     top: 0;
+  }
+
+  .top_heading {
+    position: absolute;
+    margin-top: 20px;
+    font-size: 30px;
+    left: 0;
+    right: 0;
+    color: var(--accent-color);
+    word-spacing: 3px;
+    letter-spacing: 2px;
+    text-align: center;
   }
 
   .hero_intro {
@@ -135,6 +165,9 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .top {
+    height: auto;
+  }
   .hero {
     flex-direction: column;
     justify-content: center;
@@ -142,6 +175,17 @@
     padding-left: 10px;
     padding-top: 100px;
     top: 0;
+  }
+  .top_heading {
+    position: absolute;
+    margin-top: 20px;
+    font-size: 30px;
+    left: 0;
+    right: 0;
+    color: var(--accent-color);
+    word-spacing: 3px;
+    letter-spacing: 2px;
+    text-align: center;
   }
 
   .hero_intro {

@@ -1,7 +1,15 @@
+import html from "../Source/html.png";
+import css from "../Source/css.png";
+import js from "../Source/javascript.png";
+import ts from "../Source/typescript.png";
+import react from "../Source/react.png";
+import node from "../Source/node.png";
+import redux from "../Source/redux.png";
+
 const aboutData = {
   education: [
     {
-      title: "Diploma In Mechanical Engineering",
+      title: "Diploma",
       institution: "KSR Institute of Technology",
       place: "Tiruchengode",
       year: 2018,
@@ -32,15 +40,29 @@ const aboutData = {
       year: 2022,
     },
   ],
+
   skills: [
-    "HTML",
-    "CSS",
-    "Javascript",
-    "ReactJs",
-    "NodeJs",
-    "ExpressJs",
-    "MongoDB",
+    { img: html },
+    { img: css },
+    { img: js },
+    { img: ts },
+    { img: react },
+    { img: node },
+    { img: redux },
+    { img: react },
+    { img: node },
+    { img: redux },
   ],
+
+  // skills: [
+  //   "HTML",
+  //   "CSS",
+  //   "Javascript",
+  //   "ReactJs",
+  //   "NodeJs",
+  //   "ExpressJs",
+  //   "MongoDB",
+  // ],
 };
 
 export default aboutData;

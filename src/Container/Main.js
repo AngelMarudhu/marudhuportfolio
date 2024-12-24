@@ -1,11 +1,18 @@
 import React from "react";
 import "../CSS/MainPage.css";
 import images from "../Utils/Index";
-import { motion } from "motion/react";
+import * as motion from "motion/react-client";
 
 const Main = () => {
   return (
     <section className="top">
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, transition: { duration: 1.5 } }}
+      >
+        <h2 className="top_heading">Crafting Code, Building Dreams</h2>
+      </motion.div>
+
       <div className="hero">
         <div className="hero_intro">
           <h2 className="hero_name">
@@ -27,9 +34,8 @@ const Main = () => {
         <motion.div
           className="hero_welcome"
           initial={{ scale: 0 }}
-          animate={{ scale: 1, transition: { duration: 2 } }}
+          animate={{ scale: 1, transition: { duration: 1.5 } }}
         >
-          <h4 className="welcome">Mern Stack Developer</h4>
           <img
             className="hero_pic"
             src={images.assets.myPic}

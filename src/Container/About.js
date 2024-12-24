@@ -42,9 +42,9 @@ const About = () => {
             {aboutData.skills.map((values, index) => (
               <ul key={index}>
                 <li key={index}>
-                  <button className="about_section_skills_button">
-                    {values}
-                  </button>
+                  <div className="skills_img_div">
+                    <img src={values.img} alt="skills" />
+                  </div>
                 </li>
               </ul>
             ))}
