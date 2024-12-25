@@ -1,8 +1,11 @@
 import React from "react";
 import aboutData from "../Utils/AboutData";
 import "../CSS/AboutPage.css";
+import { motion, useInView } from "framer-motion";
 
 const About = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <section id="about">
       <div className="about_section">
@@ -38,15 +41,21 @@ const About = () => {
 
         <div className="about_skills_div">
           <h2>Skills</h2>
-          <div className="about_section_skills">
+          <div className="about_section_skills" ref={ref}>
             {aboutData.skills.map((values, index) => (
-              <ul key={index}>
-                <li key={index}>
+              <motion.ul
+                key={index}
+                initial={{ opacity: 0, y: -20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <li>
                   <div className="skills_img_div">
                     <img src={values.img} alt="skills" />
                   </div>
                 </li>
-              </ul>
+              </motion.ul>
             ))}
           </div>
 
