@@ -27,15 +27,15 @@ const Footer = () => {
       .sendForm(
         "service_fh1brjm", // Your service ID
         "template_bv4vbvg", // Your template ID
-        e.target, // Use the form directly from the event
-        "9Gkyp4yme7SisKHCl" // Your public key (user ID)
+        e.target, // Use the form directly from the event to attaching the input
+        "9Gkyp4yme7SisKHCl" // Your public key
       )
       .then((result) => {
         setStatus("Message sent successfully!");
         setFormData({ to_name: "", from_name: "", message: "" }); // Clear form after submission
       })
       .catch((error) => {
-        console.error(error.text); // Log any errors
+        // console.error(error.text); // dubugging state
         setStatus("Please try again.");
       });
   };
@@ -100,7 +100,7 @@ const Footer = () => {
               type="text"
               id="to_name"
               name="to_name" // Change the name to "to_name"
-              value={formData.to_name} // Bind the value to formData
+              value={formData.to_name} // Bind the value to formData BINDING
               onChange={handleChange}
               required
               placeholder="Your Good Name"
@@ -110,7 +110,7 @@ const Footer = () => {
               type="text"
               id="from_name"
               name="from_name" // Change the name to "from_name"
-              value={formData.from_name} // Bind the value to formData
+              value={formData.from_name} // Bind the value to formData BINDING
               onChange={handleChange}
               required
               placeholder="Your Gentle Gmail"
@@ -119,7 +119,7 @@ const Footer = () => {
             <textarea
               name="message"
               id="thoughts"
-              value={formData.message} // Bind the value to formData
+              value={formData.message} // Bind the value to formData BINDING
               onChange={handleChange}
               required
               placeholder="Your Awesome Thoughts"
